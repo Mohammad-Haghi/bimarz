@@ -13,6 +13,7 @@
   },
   "description": "https://github.com/mui/material-ui/blob/v5.14.13/docs/data/material/components/selects/BasicSelect.tsx",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "react-scripts": "latest"
   },
   "main": "index.tsx",

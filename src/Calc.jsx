@@ -54,7 +54,7 @@ const Calc = ({setRes}) => {
                 country: country,
                 price: priceNum,
                 tomanPrice: priceNum * currencyNum,
-                shippingToIran: (weightNum * 1000) * (90 * currencyNum),
+                shippingToIran: (weightNum / 1000) * (90 * currencyNum),
                 fShip: fShip * currencyNum,
                 tax: priceNum * currencyNum * 0.08,
                 wage: (priceNum * currencyNum) * 0.06,
@@ -151,13 +151,13 @@ const Calc = ({setRes}) => {
                 </Typography>
                 <FormControl>
                     <TextField id="outlined-basic"
-                               type='number'
                                variant="outlined"
                                onChange={(e) => {
                                    let value = e.target.value;
                                    value = p2e(value);
                                    value = a2e(value);
-                                   value = value.replaceAll(/\D/g, "");
+                                   console.log(value);
+                                   value = value.replace(/[^0-9.]/g, '');
                                    setPrice(value);
                                }}
                                value={price}

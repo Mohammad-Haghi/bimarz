@@ -1,6 +1,6 @@
 import React from 'react';
 import Box from "@mui/material/Box";
-import {Typography} from "@mui/material";
+import {Typography, SvgIcon} from "@mui/material";
 
 const Result = ({res}: { res: any }) => {
     const toCurrency = (num: any) => new Intl.NumberFormat("fa-IR", {
@@ -17,6 +17,13 @@ const Result = ({res}: { res: any }) => {
         <Box
             sx={{background: "#f1f2f3", padding: "20px", borderRadius: "8px"}}
         >
+            <SvgIcon>
+                <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiBox-root css-1om0hkc" focusable="false"
+                     aria-hidden="true" viewBox="0 0 24 24" data-testid="ContentCopyIcon">
+                    <path
+                        d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path>
+                </svg>
+            </SvgIcon>
             <Typography
                 variant="body1"
                 sx={{
@@ -24,7 +31,8 @@ const Result = ({res}: { res: any }) => {
                     flexDirection: "row-reverse",
                     justifyContent: "space-between",
                     lineHeight: '42px',
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
+                    borderBottom: '1px solid'
                 }}
                 noWrap
                 fontFamily="Iransans"
@@ -83,6 +91,7 @@ const Result = ({res}: { res: any }) => {
                     <span>{toCurrency(res.fShip)}</span>
                 </Typography>
             }
+
             <Typography
                 variant="body1"
                 sx={{
@@ -104,12 +113,27 @@ const Result = ({res}: { res: any }) => {
                     flexDirection: "row-reverse",
                     justifyContent: "space-between",
                     lineHeight: '42px',
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
+                    borderBottom: '1px solid'
                 }}
                 fontFamily="Iransans"
             >
                 <span>:گمرک و مالیات</span>
                 <span>{toCurrency(res.tax)}</span>
+            </Typography>
+            <Typography
+                variant="body1"
+                sx={{
+                    display: "flex",
+                    flexDirection: "row-reverse",
+                    justifyContent: "space-between",
+                    lineHeight: '42px',
+                    fontWeight: 'bold'
+                }}
+                fontFamily="Iransans"
+            >
+                <span>:بدون کارمزد</span>
+                <span>{toCurrency(res.tax + res.shippingToIran + res.fShip + res.tomanPrice)}</span>
             </Typography>
             <Typography
                 variant="body1"
