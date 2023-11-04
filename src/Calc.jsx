@@ -129,7 +129,10 @@ const Calc = ({setRes}) => {
                                    value = p2e(value);
                                    value = a2e(value);
                                    value = value.replaceAll(/\D/g, "");
-                                   setCurrency(value);
+                                   setCurrency({
+                                       aed: value,
+                                       tl: value
+                                   });
                                }}
                                value={country === 10 ? currency.tl : currency.aed}
                                inputProps={{style: {fontFamily: 'Iransans', inputMode: 'numeric'}}}
@@ -148,6 +151,7 @@ const Calc = ({setRes}) => {
             <Box sx={{display: 'flex', direction: 'rtl', alignItems: 'center', justifyContent: 'space-between'}}>
                 <Typography variant='inherit' color='white' textAlign='right' fontFamily='Iransans'>
                     قیمت کالا
+                    {country === 10 ? '(لیر)' : "(درهم)"}
                 </Typography>
                 <FormControl>
                     <TextField id="outlined-basic"
@@ -156,7 +160,6 @@ const Calc = ({setRes}) => {
                                    let value = e.target.value;
                                    value = p2e(value);
                                    value = a2e(value);
-                                   console.log(value);
                                    value = value.replace(/[^0-9.]/g, '');
                                    setPrice(value);
                                }}

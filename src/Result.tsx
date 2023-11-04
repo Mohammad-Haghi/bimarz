@@ -12,6 +12,7 @@ const Result = ({res}: { res: any }) => {
         currency: "AED"
     }).format(num);
 
+    console.log(res);
 
     return (
         <Box
