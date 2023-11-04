@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/bimarz/static/js/main.3c512eed.js",
-    "index.html": "/bimarz/index.html",
-    "main.3c512eed.js.map": "/bimarz/static/js/main.3c512eed.js.map"
+    "main.js": "/static/js/main.c280f015.js",
+    "index.html": "/index.html",
+    "main.c280f015.js.map": "/static/js/main.c280f015.js.map"
   },
   "entrypoints": [
-    "static/js/main.3c512eed.js"
+    "static/js/main.c280f015.js"
   ]
 }
