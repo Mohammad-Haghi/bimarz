@@ -37,13 +37,13 @@ const Calc = ({setRes}) => {
     const handleChange = (event) => {
         setCountry(event.target.value);
     };
-
+    // console.log(currencyNum);
     const Submit = () => {
         if (country === 10) {
             return ({
                 country: country,
                 price: priceNum,
-                tomanpriceNum: priceNum * currencyNum,
+                tomanPrice: priceNum * currencyNum,
                 shippingToIran: weightNum * 235,
                 fShip: fShip * currencyNum,
                 tax: priceNum * currencyNum * 0.06,
