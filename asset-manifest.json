@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.c280f015.js",
-    "index.html": "/index.html",
-    "main.c280f015.js.map": "/static/js/main.c280f015.js.map"
+    "main.js": "/bimarz/static/js/main.c280f015.js",
+    "index.html": "/bimarz/index.html",
+    "main.c280f015.js.map": "/bimarz/static/js/main.c280f015.js.map"
   },
   "entrypoints": [
     "static/js/main.c280f015.js"
